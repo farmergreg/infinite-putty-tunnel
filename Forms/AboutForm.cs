@@ -26,6 +26,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using JoeriBekker.PuttyTunnelManager.Properties;
 
 namespace JoeriBekker.PuttyTunnelManager.Forms
 {
@@ -36,7 +37,7 @@ namespace JoeriBekker.PuttyTunnelManager.Forms
             InitializeComponent();
 
             this.about.Font = SystemFonts.MessageBoxFont;
-            this.about.Text = Application.ProductName + " " + Application.ProductVersion + "\nCopyright © 2009, Joeri Bekker\nAll rights reserved.";
+            this.about.Text = Application.ProductName + " " + Application.ProductVersion + Resources.AboutForm_CopyRight;
             this.Text = "About " + Application.ProductName;
         }
 
@@ -47,7 +48,7 @@ namespace JoeriBekker.PuttyTunnelManager.Forms
 
         private void buttonWebsite_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"http://code.google.com/p/putty-tunnel-manager/");
+            System.Diagnostics.Process.Start(@"https://github.com/kthompson/putty-tunnel-manager");
         }
     }
 }

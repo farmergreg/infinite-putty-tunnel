@@ -60,7 +60,7 @@ namespace JoeriBekker.PuttyTunnelManager
 
             if (IsAlreadyRunning())
             {
-                MessageBox.Show("An instance of " + Application.ProductName + " is already running.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"An instance of {Application.ProductName} is already running.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             TrayIcon = new TrayIcon();
