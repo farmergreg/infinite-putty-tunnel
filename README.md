@@ -1,4 +1,4 @@
-# putty-tunnel-manager
+# PuTTY Tunnel Manager
 PuTTY Tunnel Manager allows you to easily open tunnels, that are defined in a PuTTY session, from the system tray. You can also move the tunnels from PuTTY to PuTTY Tunnel Manager. This allows you to use PuTTY just for SSH shell sessions (without opening tunnels), and use PuTTY Tunnel Manager just for tunneling. 
 
 
