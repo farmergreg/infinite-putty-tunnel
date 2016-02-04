@@ -1,5 +1,6 @@
 ﻿/**
  * Copyright (c) 2009, Joeri Bekker
+ * Copyright (c) 2016, Gregory L. Dietsche
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -19,24 +20,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 using System;
+using System.Threading;
+using System.Windows.Forms;
+using Infinite.PuTTY.Tunnel.Forms;
 
-namespace JoeriBekker.PuttyTunnelManager
+namespace Infinite.PuTTY.Tunnel
 {
-    class PortAlreadyInUseException : Exception
+    internal static class Program
     {
-        private Tunnel tunnel;
-
-        public PortAlreadyInUseException(Tunnel tunnel)
+        /// <summary>
+        ///     The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        public static void Main()
         {
-            this.tunnel = tunnel;
-        }
-
-        public Tunnel Tunnel
-        {
-            get
+            using (var mutex = new Mutex(true, "RunOnce"))
             {
-                return this.tunnel;
+                if (!mutex.WaitOne(TimeSpan.Zero, true))
+                    return;
+
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new TrayIcon());
             }
         }
     }

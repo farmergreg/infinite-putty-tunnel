@@ -1,4 +1,4 @@
-﻿namespace JoeriBekker.PuttyTunnelManager.Forms
+﻿namespace Infinite.PuTTY.Tunnel.Forms
 {
     partial class AboutForm
     {
@@ -57,9 +57,9 @@
             // 
             // about
             // 
-            this.about.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.about.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.about.Location = new System.Drawing.Point(12, 9);
             this.about.Name = "about";
             this.about.Size = new System.Drawing.Size(260, 92);
@@ -68,8 +68,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.buttonWebsite);
             this.panel1.Controls.Add(this.buttonOk);
@@ -95,6 +95,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.AboutForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

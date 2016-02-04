@@ -1,5 +1,6 @@
 ﻿/**
  * Copyright (c) 2009, Joeri Bekker
+ * Copyright (c) 2016, Gregory L. Dietsche
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -19,68 +20,40 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
-using System.Text;
+using System.Reflection;
 using System.Windows.Forms;
 
-namespace JoeriBekker.PuttyTunnelManager.Forms
+namespace Infinite.PuTTY.Tunnel.Forms
 {
-    public partial class AddSessionForm : Form
+    public partial class AboutForm : Form
     {
-        private int port;
-
-        public AddSessionForm()
+        public AboutForm()
         {
             InitializeComponent();
-
-            this.port = -1;
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            if (!this.ValidateChildren())
-                return;
-
-            foreach (Session session in Core.Instance().Sessions)
-            {
-                if (session.Name.Equals(this.SessionName))
-                {
-                    MessageBox.Show(this, "A session with this name already exists. Please choose another name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.sessionNameTexBox.Focus();
-
-                    return;
-                }
-            }
-
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            Close();
         }
 
-        public string SessionName
+        private void buttonWebsite_Click(object sender, EventArgs e)
         {
-            get { return this.sessionNameTexBox.Text; }
+            Process.Start(@"https://github.com/dietsche/infinite-putty-tunnel");
         }
 
-        public string Hostname
+        private void AboutForm_Load(object sender, EventArgs e)
         {
-            get { return this.hostnameTextBox.Text; }
-        }
+            var versionInfo = FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location);
 
-        public int Port
-        {
-            get { return port; }
-        }
-
-        private void portTextBox_Validating(object sender, CancelEventArgs e)
-        {
-            int port = FormUtils.ValidatePortTextBox(sender, e);
-
-            if (!e.Cancel)
-                this.port = port;
+            about.Font = SystemFonts.MessageBoxFont;
+            about.Text =
+                $"{Application.ProductName}\n{Application.ProductVersion}\n{versionInfo.LegalCopyright.Replace(".", ".\n")}";
+            Text = $"About {Application.ProductName}";
         }
     }
 }

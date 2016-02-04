@@ -1,5 +1,6 @@
 ﻿/**
  * Copyright (c) 2009, Joeri Bekker
+ * Copyright (c) 2016, Gregory L. Dietsche
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -19,11 +20,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-using System;
 
-namespace JoeriBekker.PuttyTunnelManager
+namespace Infinite.PuTTY.Tunnel.Putty
 {
-    class PlinkNotFoundException : Exception
+    public enum TunnelType
     {
+        Local,
+        Remote,
+        Dynamic
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace JoeriBekker.PuttyTunnelManager.Forms
+﻿namespace Infinite.PuTTY.Tunnel.Forms
 {
     partial class TrayIcon
     {
@@ -33,15 +33,16 @@
             this.menuTunnels = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSparatorOne = new System.Windows.Forms.ToolStripSeparator();
             this.menuSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSeparatorTwo = new System.Windows.Forms.ToolStripSeparator();
+            this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip
             // 
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuTunnels,
             this.menuSparatorOne,
@@ -50,54 +51,54 @@
             this.menuSeparatorTwo,
             this.menuExit});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(153, 126);
+            this.contextMenuStrip.Size = new System.Drawing.Size(272, 148);
             this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.Menu_Opening);
             // 
             // menuTunnels
             // 
             this.menuTunnels.Enabled = false;
             this.menuTunnels.Name = "menuTunnels";
-            this.menuTunnels.Size = new System.Drawing.Size(152, 22);
+            this.menuTunnels.Size = new System.Drawing.Size(271, 26);
             this.menuTunnels.Text = "&Tunnels";
             // 
             // menuSparatorOne
             // 
             this.menuSparatorOne.Name = "menuSparatorOne";
-            this.menuSparatorOne.Size = new System.Drawing.Size(149, 6);
+            this.menuSparatorOne.Size = new System.Drawing.Size(268, 6);
             // 
             // menuSettings
             // 
             this.menuSettings.Name = "menuSettings";
-            this.menuSettings.Size = new System.Drawing.Size(152, 22);
-            this.menuSettings.Text = "Settings...";
+            this.menuSettings.Size = new System.Drawing.Size(271, 26);
+            this.menuSettings.Text = "Configure Plink.exe Location";
             this.menuSettings.Click += new System.EventHandler(this.MenuSettings_Click);
-            // 
-            // menuExit
-            // 
-            this.menuExit.Name = "menuExit";
-            this.menuExit.Size = new System.Drawing.Size(152, 22);
-            this.menuExit.Text = "E&xit";
-            this.menuExit.Click += new System.EventHandler(this.MenuExit_Click);
-            // 
-            // notifyIcon
-            // 
-            this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
-            this.notifyIcon.Icon = global::JoeriBekker.PuttyTunnelManager.Properties.Resources.TrayIcon;
-            this.notifyIcon.Text = "PuTTY Tunnel Manager";
-            this.notifyIcon.Visible = true;
-            this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TrayIcon_MouseClick);
             // 
             // menuAbout
             // 
             this.menuAbout.Name = "menuAbout";
-            this.menuAbout.Size = new System.Drawing.Size(152, 22);
+            this.menuAbout.Size = new System.Drawing.Size(271, 26);
             this.menuAbout.Text = "&About";
             this.menuAbout.Click += new System.EventHandler(this.MenuAbout_Click);
             // 
             // menuSeparatorTwo
             // 
             this.menuSeparatorTwo.Name = "menuSeparatorTwo";
-            this.menuSeparatorTwo.Size = new System.Drawing.Size(149, 6);
+            this.menuSeparatorTwo.Size = new System.Drawing.Size(268, 6);
+            // 
+            // menuExit
+            // 
+            this.menuExit.Name = "menuExit";
+            this.menuExit.Size = new System.Drawing.Size(271, 26);
+            this.menuExit.Text = "E&xit";
+            this.menuExit.Click += new System.EventHandler(this.MenuExit_Click);
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
+            this.notifyIcon.Icon = global::Infinite.PuTTY.Tunnel.Properties.Resources.TrayIcon;
+            this.notifyIcon.Text = "Infinite PuTTY Tunnel";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TrayIcon_MouseClick);
             // 
             // TrayIcon
             // 
@@ -106,6 +107,7 @@
             this.ClientSize = new System.Drawing.Size(323, 255);
             this.Name = "TrayIcon";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.TrayIcon_Load);
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 

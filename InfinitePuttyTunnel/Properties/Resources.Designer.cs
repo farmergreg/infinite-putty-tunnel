@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JoeriBekker.PuttyTunnelManager.Properties {
+namespace Infinite.PuTTY.Tunnel.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace JoeriBekker.PuttyTunnelManager.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("JoeriBekker.PuttyTunnelManager.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Infinite.PuTTY.Tunnel.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,17 +57,6 @@ namespace JoeriBekker.PuttyTunnelManager.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 
-        ///Copyright © 2009-2015, Joeri Bekker
-        ///All rights reserved..
-        /// </summary>
-        internal static string AboutForm_CopyRight {
-            get {
-                return ResourceManager.GetString("AboutForm_CopyRight", resourceCulture);
             }
         }
         
