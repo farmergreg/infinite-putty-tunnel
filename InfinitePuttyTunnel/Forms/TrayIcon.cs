@@ -181,8 +181,6 @@ namespace Infinite.PuTTY.Tunnel.Forms
             {
                 StartSession(session);
             }
-
-            _sessionManager.SaveActiveTunnels();
         }
 
         #region Start Session
@@ -211,6 +209,8 @@ namespace Infinite.PuTTY.Tunnel.Forms
 
         private void MenuExit_Click(object sender, EventArgs e)
         {
+            _sessionManager.SaveActiveTunnels();
+
             foreach (var curSession in _sessionManager.Sessions)
                 curSession.Stop();
 
