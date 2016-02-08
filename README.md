@@ -1,13 +1,13 @@
 # Infinite PuTTY Tunnel
-*Infinite PuTTY Tunnel* allows you to quickly open [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) ssh tunnels from the system tray.
+*Infinite PuTTY Tunnel* allows you to quickly open [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) persistent ssh tunnels from the system tray.
 
 ## Features
 
-* Quickly start and stop ssh tunnels defined in PuTTY from the system tray.
-* Remembers tunnels that were active and will restart them automatically when ipt.exe starts.
+* Quick: start and stop ssh tunnels defined in PuTTY from the system tray.
+* Persistent Tunnels: Remembers active tunnels and will restart them automatically when ipt.exe is launched.
 * Watchdog: Restart tunnels that have closed unexpectedly.
-* No support for password based authentication because it is insecure.
-* TODO: Keep track of open tunnels and prevent multiple tunnels from listening on the same port
+* Secure: No support for password based authentication because it is insecure.
+* Department Of Redundancy: TODO: Keep track of open tunnels and prevent multiple tunnels from listening on the same port
 
 ## Screen Shots
 
