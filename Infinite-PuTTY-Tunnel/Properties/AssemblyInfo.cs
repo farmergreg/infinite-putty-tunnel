@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Infinite PuTTY Tunnel")]
-[assembly: AssemblyCopyright("Copyright 2016 Gregory L Dietsche. Copyright 2009-2009 Joeri Bekker.")]
+[assembly: AssemblyCopyright("Copyright 2016 Gregory L Dietsche. Copyright 2009 Joeri Bekker.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
