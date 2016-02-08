@@ -19,10 +19,10 @@
 
 ## Using ipt.exe
 1. Configure your tunnel using putty.exe and save it as a session.
+2. Run the session using putty.exe and ensure that it connects automatically and DOES NOT prompt you for a username or password. 
 3. You MUST use public key authentication.
     * This software does not work with username and passwords because they are insecure.
     * Take a look at Pageant and use it to manage your keys.
-2. Run the session using putty.exe and ensure that it connects automatically and DOES NOT prompt you for a username or password. 
 
 ## History
 This software is a fork of *Putty Tunnel Manager*. The [original](https://github.com/joeribekker/putty-tunnel-manager) appears to be no longer maintained.
