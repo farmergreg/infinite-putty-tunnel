@@ -26,7 +26,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using Infinite.PuTTY.Tunnel.Properties;
-using Microsoft.Win32;
 
 namespace Infinite.PuTTY.Tunnel.Putty
 {
@@ -45,11 +44,11 @@ namespace Infinite.PuTTY.Tunnel.Putty
 
         public string Name => Uri.UnescapeDataString(_puttySessionKey);
 
-        public PlinkSession(string sessionKey, string portForwards)
+        public PlinkSession(string sessionKey, string puttyPortForwards)
         {
             _puttySessionKey = sessionKey;
 
-            foreach (var curTunnel in portForwards.Split(','))
+            foreach (var curTunnel in puttyPortForwards.Split(','))
             {
                 if (!string.IsNullOrEmpty(curTunnel))
                 {
