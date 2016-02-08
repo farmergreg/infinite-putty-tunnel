@@ -3,11 +3,11 @@
 
 ## Features
 
-* Quick: Start and stop ssh tunnels defined in PuTTY from the system tray.
-* Persistent Tunnels: Remembers active tunnels and will restart them automatically when ipt.exe is launched.
-* Watchdog: Restart tunnels that have closed unexpectedly.
-* Secure: No support for password based authentication because it is insecure.
-* Department Of Redundancy: TODO: Keep track of open tunnels and prevent multiple tunnels from listening on the same port
+- **Quick:** Start and stop ssh tunnels defined in PuTTY from the system tray.
+- **Persistent Tunnels:** Remembers active tunnels and will restart them automatically when ipt.exe is launched.
+- **Watchdog:** Restart tunnels that have closed unexpectedly.
+- **Secure:** No support for password based authentication because it is insecure.
+- **Department Of Redundancy:** TODO: Keep track of open tunnels and prevent multiple tunnels from listening on the same port
 
 ## Screen Shots
 
