@@ -142,7 +142,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
                     sb.Append(":\n");
                     foreach (var curTunnel in curSession.Tunnels)
                     {
-                        sb.Append('\t');
+                        sb.Append("  ");
                         sb.Append(curTunnel);
                         sb.Append('\n');
                     }
