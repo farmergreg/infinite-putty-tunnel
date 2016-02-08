@@ -22,7 +22,7 @@
 2. Run the session using putty.exe and ensure that it connects automatically and DOES NOT prompt you for a username or password. 
 3. You MUST use public key authentication.
     * This software does not work with username and passwords because they are insecure.
-    * Take a look at Pageant and use it to manage your keys.
+    * Take a look at [Pageant](http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter9.html#pageant) and use it to manage your keys.
 
 ## Screen Shots
 
