@@ -52,7 +52,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
 
             about.Font = SystemFonts.MessageBoxFont;
             about.Text =
-                $"{Application.ProductName}\n{Application.ProductVersion}\n{versionInfo.LegalCopyright.Replace(". ", ".\n")}";
+                $"{Application.ProductName} v{Application.ProductVersion}\n{versionInfo.LegalCopyright.Replace(". ", ".\n")}";
             Text = $"About {Application.ProductName}";
         }
     }
