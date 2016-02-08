@@ -9,6 +9,11 @@
 * No support for password based authentication because it is insecure.
 * TODO: Keep track of open tunnels and prevent multiple tunnels from listening on the same port
 
+## Screen Shots
+
+![](screen-shots/SystemTray-Menu.png)
+![](screen-shots/SystemTray-CurrentTunnels.png)
+
 ## Best Practices
 1. Configure your tunnel using putty.exe and save it as a session.
 2. [Configure Pageant](http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter9.html#pageant-cmdline-command) to start ipt.exe after your keys are loaded.
@@ -23,11 +28,6 @@
 4. Configure a tunnel using PuTTY and save it as a session, and test to make sure the tunnel works properly.
 5. Start Infinite PuTTY Tunnel (ipt.exe).
 6. Use the system tray icon to start your pre-configured ssh tunnel!
-
-## Screen Shots
-
-![](screen-shots/SystemTray-Menu.png)
-![](screen-shots/SystemTray-CurrentTunnels.png)
 
 ## History
 This software is a fork of *PuTTY Tunnel Manager*. The [original](https://github.com/joeribekker/putty-tunnel-manager) appears to be no longer maintained.
