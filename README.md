@@ -31,5 +31,5 @@
 
 ## History
 This software is a fork of *Putty Tunnel Manager*. The [original](https://github.com/joeribekker/putty-tunnel-manager) appears to be no longer maintained.
-This program is nearly a complete rewrite of the original *Putty Tunnel Manager*. I've made many changes and have done my best to improve the code and reliability of this software.
+This program is nearly a complete rewrite of the original *Putty Tunnel Manager*. I've made many changes and have done my best to improve the reliability and code quality of this software.
 
