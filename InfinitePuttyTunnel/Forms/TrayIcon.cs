@@ -130,7 +130,10 @@ namespace Infinite.PuTTY.Tunnel.Forms
             if (e.Button == MouseButtons.Left)
             {
                 if (!_sessionManager.Sessions.Any(s => s.IsActive))
+                {
+                    notifyIcon.ShowBalloonTip(1000, "Current Tunnels", "No Active Tunnels", ToolTipIcon.Info);
                     return;
+                }
 
                 var sb = new StringBuilder();
                 foreach (var curSession in _sessionManager.Sessions.Where(s => s.IsActive))
