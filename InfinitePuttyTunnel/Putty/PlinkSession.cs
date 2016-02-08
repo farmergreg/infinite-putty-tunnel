@@ -97,7 +97,7 @@ namespace Infinite.PuTTY.Tunnel.Putty
                 //Watchdog. Restart because we didn't expect plink.exe to exit.
                 while (!IsActive)
                 {
-                    Thread.Sleep(Settings.Default.WatchDogRetryDelay);
+                    Thread.Sleep(Settings.Default.WatchDogRetryDelayInMilliseconds);
 
                     //If this is the second time through, then only try to start if the thread isn't up yet...
                     if(!IsActive)

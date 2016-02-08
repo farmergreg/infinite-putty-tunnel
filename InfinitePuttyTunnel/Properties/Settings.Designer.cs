@@ -58,12 +58,12 @@ namespace Infinite.PuTTY.Tunnel.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5000")]
-        public int WatchDogRetryDelay {
+        public int WatchDogRetryDelayInMilliseconds {
             get {
-                return ((int)(this["WatchDogRetryDelay"]));
+                return ((int)(this["WatchDogRetryDelayInMilliseconds"]));
             }
             set {
-                this["WatchDogRetryDelay"] = value;
+                this["WatchDogRetryDelayInMilliseconds"] = value;
             }
         }
     }
