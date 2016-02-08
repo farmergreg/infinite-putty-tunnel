@@ -82,13 +82,13 @@ namespace Infinite.PuTTY.Tunnel.Putty
             switch (Type)
             {
                 case TunnelType.Local:
-                    return $"{IpVersion} {SourcePort:D4} ==> {Destination}:{DestinationPort:D4}";
+                    return $"{IpVersion} {SourcePort} ==> {Destination}:{DestinationPort}";
 
                 case TunnelType.Remote:
-                    return $"{IpVersion} {SourcePort:D4} <== {Destination}:{DestinationPort:D4}";
+                    return $"{IpVersion} {SourcePort} <== {Destination}:{DestinationPort}";
 
                 case TunnelType.Dynamic:
-                    return $"{IpVersion} {SourcePort:D4} <==> *:*";
+                    return $"{IpVersion} {SourcePort} <==> *:*";
 
                 default:
                     throw new ArgumentOutOfRangeException();
