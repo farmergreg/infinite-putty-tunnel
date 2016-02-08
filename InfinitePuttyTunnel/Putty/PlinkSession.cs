@@ -24,7 +24,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
+using System.Threading;
 using Infinite.PuTTY.Tunnel.Properties;
 using Microsoft.Win32;
 
@@ -34,7 +34,7 @@ namespace Infinite.PuTTY.Tunnel.Putty
     {
         public delegate void PlinkSessionEventHandler(PlinkSession sender);
 
-        public event PlinkSessionEventHandler UnexpectedExitHandler;
+        public event PlinkSessionEventHandler WatchdogRestartHandler;
         public event PlinkSessionEventHandler StartTunnelHandler;
 
         public readonly IList<Tunnel> Tunnels = new List<Tunnel>();
@@ -62,6 +62,11 @@ namespace Infinite.PuTTY.Tunnel.Putty
 
         public void Start()
         {
+            Start(_plink != null && _plink.HasExited);
+        }
+
+        public void Start(bool isRestart)
+        {
             if (IsActive) return;
 
             _plink = new Process
@@ -77,15 +82,34 @@ namespace Infinite.PuTTY.Tunnel.Putty
                 }
             };
 
-            _plink.Exited += _plink_Exited;
+            _plink.Exited += plink_Exited;
             _plink.EnableRaisingEvents = true;
             _plink.Start();
-            StartTunnelHandler?.Invoke(this);
+
+            if(isRestart)
+                WatchdogRestartHandler?.Invoke(this);
+            else
+                StartTunnelHandler?.Invoke(this);
         }
 
-        private void _plink_Exited(object sender, EventArgs e)
+        private void plink_Exited(object sender, EventArgs e)
         {
-            UnexpectedExitHandler?.Invoke(this);
+            try
+            {
+                //Watchdog. Restart because we didn't expect plink.exe to exit.
+                while (!IsActive)
+                {
+                    Thread.Sleep(Settings.Default.WatchDogRetryDelay);
+
+                    //If this is the second time through, then only try to start if the thread isn't up yet...
+                    if(!IsActive)
+                        Start(true);
+                }
+            }
+            catch
+            {
+                //do nothing
+            }
         }
 
         public void Stop()

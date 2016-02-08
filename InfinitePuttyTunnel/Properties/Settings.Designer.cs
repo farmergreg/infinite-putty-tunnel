@@ -54,5 +54,17 @@ namespace Infinite.PuTTY.Tunnel.Properties {
                 this["ActiveTunnels"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
+        public int WatchDogRetryDelay {
+            get {
+                return ((int)(this["WatchDogRetryDelay"]));
+            }
+            set {
+                this["WatchDogRetryDelay"] = value;
+            }
+        }
     }
 }

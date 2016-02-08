@@ -188,7 +188,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
         #region Start Session
         private void StartSession(PlinkSession session)
         {
-            session.UnexpectedExitHandler += Session_UnexpectedExitHandler;
+            session.WatchdogRestartHandler += SessionWatchdogRestartHandler;
             session.StartTunnelHandler += Session_StartTunnelHandler;
             session.Start();
         }
@@ -203,9 +203,9 @@ namespace Infinite.PuTTY.Tunnel.Forms
             notifyIcon.ShowBalloonTip(1000, $"{Application.ProductName}", $"Restarting {sender.Name}", ToolTipIcon.Info);
         }
 
-        private void Session_UnexpectedExitHandler(PlinkSession sender)
+        private void SessionWatchdogRestartHandler(PlinkSession sender)
         {
-            notifyIcon.ShowBalloonTip(5000, $"{Application.ProductName}", $"{sender.Name} stopped unexpectedly", ToolTipIcon.Error);
+            notifyIcon.ShowBalloonTip(5000, $"{Application.ProductName}", $"Restarting {sender.Name} because it terminated unexpectedly.", ToolTipIcon.Error);
         }
         #endregion
 
