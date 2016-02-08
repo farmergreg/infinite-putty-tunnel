@@ -27,6 +27,7 @@
 ## Screen Shots
 
 ![](screen-shots/SystemTray-Menu.png)
+![](screen-shots/SystemTray-CurrentTunnels.png)
 
 ## History
 This software is a fork of *Putty Tunnel Manager*. The [original](https://github.com/joeribekker/putty-tunnel-manager) appears to be no longer maintained.
