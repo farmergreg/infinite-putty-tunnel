@@ -10,9 +10,9 @@
 
 ## Download and installation
 
-1. Download the latest version of [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.66-installer.exe).
-2. Download the latest version of [ipt.exe](https://github.com/gdietsche/infinite-tunnel-manager/releases).
-3. Prerequisite: .NET 4.6.1 Framework. This is installed on most modern Microsoft OSes that have windows update enabled.
+1. Install the .NET 4.6.1 Framework. Most computers will already have this installed.
+2. Download the latest version of [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.66-installer.exe).
+3. Download the latest version of [ipt.exe](https://github.com/gdietsche/infinite-tunnel-manager/releases).
 4. Start Infinite PuTTY Tunnel (ipt.exe).
 
 ## Using ipt.exe
