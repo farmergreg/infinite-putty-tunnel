@@ -1,5 +1,5 @@
 # Infinite PuTTY Tunnel
-*Infinite PuTTY Tunnel* allows you to quickly open [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) persistent ssh tunnels from the system tray.
+*Infinite PuTTY Tunnel* allows you to quickly open [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) persistent ssh tunnels from your system tray.
 
 ## Features
 
