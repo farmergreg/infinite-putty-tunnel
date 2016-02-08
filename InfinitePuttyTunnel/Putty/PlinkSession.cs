@@ -56,8 +56,6 @@ namespace Infinite.PuTTY.Tunnel.Putty
                     Tunnels.Add(new Tunnel(curTunnel));
                 }
             }
-
-            SystemEvents.PowerModeChanged += SystemEvents_PowerModeChanged;
         }
 
         public void Start()
@@ -130,23 +128,6 @@ namespace Infinite.PuTTY.Tunnel.Putty
         public override string ToString()
         {
             return Name;
-        }
-
-        /// <summary>
-        ///     Stop on suspend, start again upon resume.
-        /// </summary>
-        private void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e)
-        {
-            switch (e.Mode)
-            {
-                case PowerModes.Suspend:
-                    Stop();
-                    break;
-
-                case PowerModes.Resume:
-                    Start();
-                    break;
-            }
         }
     }
 }
