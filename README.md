@@ -11,7 +11,7 @@
 
 ## Best Practices
 1. Configure your tunnel using putty.exe and save it as a session.
-2. [Configure Pageant]((http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter9.html#pageant-cmdline-command) to start ipt.exe after your keys are loaded.
+2. [Configure Pageant](http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter9.html#pageant-cmdline-command) to start ipt.exe after your keys are loaded.
 3. Using PuTTY, Ensure that the session works and does not trigger any user prompts.
 4. Begin using *Infinite Putty Tunnel* to automatically maintain your tunnels.
 
