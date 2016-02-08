@@ -15,6 +15,7 @@
 3. Download the latest version of [ipt.exe](https://github.com/gdietsche/infinite-tunnel-manager/releases).
 4. Configure a tunnel using Putty and save it as a session, and test to make sure the tunnel works properly.
 5. Start Infinite PuTTY Tunnel (ipt.exe).
+6. Use the system tray icon to start your pre-configured ssh tunnel!
 
 ## Using ipt.exe
 1. Configure your tunnel using putty.exe and save it as a session.
