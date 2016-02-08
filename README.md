@@ -6,8 +6,8 @@
 * Quickly start and stop ssh tunnels defined in PuTTY from the system tray.
 * Remembers tunnels that were active and will restart them automatically when ipt.exe starts.
 * Watchdog: Restart tunnels that have closed unexpectedly.
-* TODO: Keep track of open tunnels and prevent multiple tunnels from listening on the same port
 * No support for password based authentication because it is insecure.
+* TODO: Keep track of open tunnels and prevent multiple tunnels from listening on the same port
 
 ## Best Practices
 1. Configure your tunnel using putty.exe and save it as a session.
