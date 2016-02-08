@@ -24,6 +24,10 @@
     * This software does not work with username and passwords because they are insecure.
     * Take a look at Pageant and use it to manage your keys.
 
+## Screen Shots
+
+![](screen-shots/SystemTray-Menu.png)
+
 ## History
 This software is a fork of *Putty Tunnel Manager*. The [original](https://github.com/joeribekker/putty-tunnel-manager) appears to be no longer maintained.
 This program is nearly a complete rewrite of the original *Putty Tunnel Manager*. I've made many changes and have done my best to improve the code and reliability of this software.
