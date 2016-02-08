@@ -3,7 +3,7 @@
 
 ## Features
 
-* Quick: start and stop ssh tunnels defined in PuTTY from the system tray.
+* Quick: Start and stop ssh tunnels defined in PuTTY from the system tray.
 * Persistent Tunnels: Remembers active tunnels and will restart them automatically when ipt.exe is launched.
 * Watchdog: Restart tunnels that have closed unexpectedly.
 * Secure: No support for password based authentication because it is insecure.
