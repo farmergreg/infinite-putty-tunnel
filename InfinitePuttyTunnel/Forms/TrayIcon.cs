@@ -126,8 +126,12 @@ namespace Infinite.PuTTY.Tunnel.Forms
 
         private void TrayIcon_MouseClick(object sender, MouseEventArgs e)
         {
+
             if (e.Button == MouseButtons.Left)
             {
+                if (!_sessionManager.Sessions.Any(s => s.IsActive))
+                    return;
+
                 var sb = new StringBuilder();
                 foreach (var curSession in _sessionManager.Sessions.Where(s => s.IsActive))
                 {
@@ -140,10 +144,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
                         sb.Append('\n');
                     }
                 }
-                notifyIcon.BalloonTipTitle = "Current Tunnels";
-                notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
-                notifyIcon.BalloonTipText = sb.ToString();
-                notifyIcon.ShowBalloonTip(1000);
+                notifyIcon.ShowBalloonTip(1000, "Current Tunnels", sb.ToString(), ToolTipIcon.Info);
             }
         }
 
