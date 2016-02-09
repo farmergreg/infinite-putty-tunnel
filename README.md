@@ -16,9 +16,9 @@
 
 ## Installation
 
-1. [Download] [dot-net] and install the .NET 4.6.1 Framework. Most computers will already have this installed via Windows Update
+1. Download and install the [.NET 4.6.1 Framework] [dot-net]. Most computers will already have this installed via Windows Update
 2. [Download][putty-installer] and install the latest version of PuTTY
-3. [Download][current-release] and install the latest version of *Infinite PuTTY Tunnel* (ipt.exe)
+3. Download and install the [latest version] [current-release] of *Infinite PuTTY Tunnel* (ipt.exe)
 
 ## Configuration
 
