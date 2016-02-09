@@ -16,7 +16,7 @@
 
 ## Installation
 
-1. Download and install the .NET 4.6.1 Framework. Most computers will already have this installed via Windows Update.
+1. Download and install the [.NET 4.6.1 Framework] [dot-net]. Most computers will already have this installed via Windows Update.
 2. [Download][putty-installer] and install the latest version of PuTTY.
 3. [Download][current-release] and install the latest version of *Infinite PuTTY Tunnel*.
 
@@ -38,3 +38,4 @@ This program is nearly a complete rewrite of the original *Putty Tunnel Manager*
 [putty-config-ssh-portfwd]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-ssh-portfwd
 [putty-config-session]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-session
 [putty-pageant-cmdline-command]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter9.html#pageant-cmdline-command
+[dot-net]: https://www.microsoft.com/en-us/download/details.aspx?id=49981
