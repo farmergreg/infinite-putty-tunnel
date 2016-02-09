@@ -192,6 +192,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
         {
             session.WatchdogRestartHandler += SessionWatchdogRestartHandler;
             session.StartTunnelHandler += Session_StartTunnelHandler;
+            session.StopTunnelHandler += Session_StopTunnelHandler1;
             session.Start();
         }
 
@@ -199,10 +200,9 @@ namespace Infinite.PuTTY.Tunnel.Forms
         {
             notifyIcon.ShowBalloonTip(1000, $"{Application.ProductName}", $"Started {sender.Name}", ToolTipIcon.Info);
         }
-
-        private void SessionRestartTunnelHandler(PlinkSession sender)
+        private void Session_StopTunnelHandler1(PlinkSession sender)
         {
-            notifyIcon.ShowBalloonTip(1000, $"{Application.ProductName}", $"Restarting {sender.Name}", ToolTipIcon.Info);
+            notifyIcon.ShowBalloonTip(1000, $"{Application.ProductName}", $"Stopped {sender.Name}", ToolTipIcon.Info);
         }
 
         private void SessionWatchdogRestartHandler(PlinkSession sender)

@@ -35,6 +35,7 @@ namespace Infinite.PuTTY.Tunnel.Putty
 
         public event PlinkSessionEventHandler WatchdogRestartHandler;
         public event PlinkSessionEventHandler StartTunnelHandler;
+        public event PlinkSessionEventHandler StopTunnelHandler;
 
         public readonly IList<Tunnel> Tunnels = new List<Tunnel>();
         private readonly string _puttySessionKey;
@@ -133,6 +134,7 @@ namespace Infinite.PuTTY.Tunnel.Putty
                 _plink.Dispose();
                 _plink = null;
             }
+            StopTunnelHandler?.Invoke(this);
         }
         public void Dispose()
         {
