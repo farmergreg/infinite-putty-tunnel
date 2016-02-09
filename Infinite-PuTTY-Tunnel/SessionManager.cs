@@ -46,7 +46,7 @@ namespace Infinite.PuTTY.Tunnel
             }
         }
 
-        internal void SaveActiveTunnels()
+        internal void SaveEnabledTunnels()
         {
             Settings.Default.ActiveTunnels = new StringCollection();
             foreach (var curTunnel in Sessions.Where(s => s.IsEnabled).Select(s => s.Name).ToList())
