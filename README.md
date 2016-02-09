@@ -14,20 +14,18 @@
 ![](screen-shots/SystemTray-Menu.png)
 ![](screen-shots/SystemTray-CurrentTunnels.png)
 
-## Best Practices
-1. [Configure your tunnel][putty-config-ssh-portfwd] using putty.exe and [save it as a session][putty-config-session].
-2. [Configure Pageant][putty-pageant-cmdline-command] to start ipt.exe after your keys are loaded.
-3. Using PuTTY, Ensure that the session works and does not trigger any interactive prompts.
-4. Begin using *Infinite PuTTY Tunnel* to automatically start and maintain your tunnel.
-
 ## Installation
 
 1. Download and install the .NET 4.6.1 Framework. Most computers will already have this installed via Windows Update.
 2. [Download][putty-installer] and install the latest version of PuTTY.
 3. [Download][current-release] and install the latest version of *Infinite PuTTY Tunnel*.
-4. [Configure a tunnel][putty-config-ssh-portfwd] using PuTTY and [save it as a session][putty-config-session], and test to make sure the tunnel works properly.
-5. Start Infinite PuTTY Tunnel (ipt.exe).
-6. Use the system tray icon to start your pre-configured ssh tunnel!
+
+## Configuration
+
+1. [Configure your tunnel][putty-config-ssh-portfwd] using putty.exe and [save it as a session][putty-config-session].
+2. [Configure Pageant][putty-pageant-cmdline-command] to start ipt.exe after your keys are loaded.
+3. Using PuTTY, Ensure that the session works and does not trigger any interactive prompts.
+4. Begin using *Infinite PuTTY Tunnel* to automatically start and maintain your tunnel.
 
 ## History
 This software is a fork of *PuTTY Tunnel Manager*. The [original][downstream] appears to be no longer maintained.
