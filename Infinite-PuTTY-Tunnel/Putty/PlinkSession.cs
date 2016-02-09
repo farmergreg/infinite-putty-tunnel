@@ -108,12 +108,12 @@ namespace Infinite.PuTTY.Tunnel.Putty
                 // do nothing
             }
 
-            while (!IsActive && IsEnabled)
+            while (IsEnabled && !IsActive)
             {
                 try
                 {
                     Thread.Sleep(Settings.Default.WatchDogRetryDelayInMilliseconds);
-                    if (!IsActive && IsEnabled)
+                    if (IsEnabled && !IsActive)
                         Start(true);
                 }
                 catch
