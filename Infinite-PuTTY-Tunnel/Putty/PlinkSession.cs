@@ -92,24 +92,36 @@ namespace Infinite.PuTTY.Tunnel.Putty
                 StartTunnelHandler?.Invoke(this);
         }
 
+        /// <summary>
+        /// Watchdog: Try to restart the session because it exited unexpectedly.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void plink_Exited(object sender, EventArgs e)
         {
-            //Watchdog. Restart because we didn't expect plink.exe to exit.
             try
             {
                 Start(true);
-                while (!IsActive && IsEnabled)
+            }
+            catch
+            {
+                // do nothing
+            }
+
+            while (!IsActive && IsEnabled)
+            {
+                try
                 {
                     Thread.Sleep(Settings.Default.WatchDogRetryDelayInMilliseconds);
 
                     //If this is the second time through, then only try to start if the thread isn't up yet...
-                    if(!IsActive && IsEnabled)
+                    if (!IsActive && IsEnabled)
                         Start(true);
                 }
-            }
-            catch
-            {
-                //do nothing
+                catch
+                {
+                    // do nothing
+                }
             }
         }
 
