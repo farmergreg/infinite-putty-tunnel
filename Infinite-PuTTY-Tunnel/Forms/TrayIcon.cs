@@ -207,7 +207,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
 
         private void SessionWatchdogRestartHandler(PlinkSession sender)
         {
-            notifyIcon.ShowBalloonTip(5000, $"{Application.ProductName}", $"Restarting {sender.Name} because it terminated unexpectedly.", ToolTipIcon.Error);
+            notifyIcon.ShowBalloonTip(5000, $"{Application.ProductName}", $"Restarting {sender.Name} because it exited unexpectedly.", ToolTipIcon.Error);
         }
         #endregion
 
