@@ -40,7 +40,9 @@ namespace Infinite.PuTTY.Tunnel.Putty
         private readonly string _puttySessionKey;
         private Process _plink;
 
-        public bool IsActive => _plink != null && !_plink.HasExited;
+        public bool IsEnabled { get; private set; }
+
+        private bool IsActive => _plink != null && !_plink.HasExited;
 
         public string Name => Uri.UnescapeDataString(_puttySessionKey);
 
@@ -64,6 +66,7 @@ namespace Infinite.PuTTY.Tunnel.Putty
 
         public void Start(bool isRestart)
         {
+            IsEnabled = true;
             if (IsActive) return;
 
             _plink = new Process
@@ -94,12 +97,12 @@ namespace Infinite.PuTTY.Tunnel.Putty
             try
             {
                 //Watchdog. Restart because we didn't expect plink.exe to exit.
-                while (!IsActive)
+                while (!IsActive && IsEnabled)
                 {
                     Thread.Sleep(Settings.Default.WatchDogRetryDelayInMilliseconds);
 
                     //If this is the second time through, then only try to start if the thread isn't up yet...
-                    if(!IsActive)
+                    if(!IsActive && IsEnabled)
                         Start(true);
                 }
             }
@@ -111,6 +114,7 @@ namespace Infinite.PuTTY.Tunnel.Putty
 
         public void Stop()
         {
+            IsEnabled = false;
             if (_plink != null)
             {
                 _plink.EnableRaisingEvents = false;

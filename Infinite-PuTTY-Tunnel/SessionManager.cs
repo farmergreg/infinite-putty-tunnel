@@ -39,7 +39,7 @@ namespace Infinite.PuTTY.Tunnel
                 //We keep the active session objects and merge that list with the list of all available sessions.
                 //This way we don't loose our active sessions and we are able to show the user the most up-to-date
                 //list of sessions available in putty.
-                var enabled = _sessions.Where(s => s.IsActive).ToList();
+                var enabled = _sessions.Where(s => s.IsEnabled).ToList();
                 var inactive = Putty.Putty.AvaiableSessions.Where(avail => enabled.All(a => a.Name != avail.Name));
                 _sessions = enabled.Union(inactive).ToList();
                 return _sessions;
@@ -49,7 +49,7 @@ namespace Infinite.PuTTY.Tunnel
         internal void SaveActiveTunnels()
         {
             Settings.Default.ActiveTunnels = new StringCollection();
-            foreach (var curTunnel in Sessions.Where(s => s.IsActive).Select(s => s.Name).ToList())
+            foreach (var curTunnel in Sessions.Where(s => s.IsEnabled).Select(s => s.Name).ToList())
             {
                 Settings.Default.ActiveTunnels.Add(curTunnel);
             }

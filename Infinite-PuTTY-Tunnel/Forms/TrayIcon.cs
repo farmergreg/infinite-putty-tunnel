@@ -54,7 +54,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
             if (Settings.Default.ActiveTunnels == null) return;
             foreach (var curTunnel in Settings.Default.ActiveTunnels)
             {
-                var session = _sessionManager.Sessions.FirstOrDefault(s => s.Name == curTunnel && !s.IsActive);
+                var session = _sessionManager.Sessions.FirstOrDefault(s => s.Name == curTunnel && !s.IsEnabled);
                 if(session!=null)StartSession(session);
             }
         }
@@ -129,14 +129,14 @@ namespace Infinite.PuTTY.Tunnel.Forms
 
             if (e.Button == MouseButtons.Left)
             {
-                if (!_sessionManager.Sessions.Any(s => s.IsActive))
+                if (!_sessionManager.Sessions.Any(s => s.IsEnabled))
                 {
                     notifyIcon.ShowBalloonTip(1000, "Current Tunnels", "No Active Tunnels", ToolTipIcon.Info);
                     return;
                 }
 
                 var sb = new StringBuilder();
-                foreach (var curSession in _sessionManager.Sessions.Where(s => s.IsActive))
+                foreach (var curSession in _sessionManager.Sessions.Where(s => s.IsEnabled))
                 {
                     sb.Append(curSession.Name);
                     sb.Append(":\n");
@@ -167,7 +167,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
                 var sessionItem = (ToolStripMenuItem) menuTunnels.DropDownItems.Add(curSession.Name);
                 sessionItem.Tag = curSession;
                 sessionItem.Click += MenuSession_Click;
-                sessionItem.Checked = curSession.IsActive;
+                sessionItem.Checked = curSession.IsEnabled;
             }
         }
 
