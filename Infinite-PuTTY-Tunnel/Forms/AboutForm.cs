@@ -51,8 +51,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
             var versionInfo = FileVersionInfo.GetVersionInfo(Assembly.GetEntryAssembly().Location);
 
             about.Font = SystemFonts.MessageBoxFont;
-            about.Text =
-                $"{Application.ProductName} v{Application.ProductVersion}\n{versionInfo.LegalCopyright.Replace(". ", ".\n")}";
+            about.Text = $"{Application.ProductName} v{Application.ProductVersion}\n{versionInfo.LegalCopyright.Replace(". ", ".\n")}";
             Text = $"About {Application.ProductName}";
         }
     }
