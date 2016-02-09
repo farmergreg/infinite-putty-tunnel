@@ -3,8 +3,8 @@
 
 ## Features
 
-- **Quick:** Start and stop ssh tunnels [defined in PuTTY][putty-config-ssh-portfwd] from the system tray.
-- **Persistent Tunnels:** Automatically start previously active tunnels when ipt.exe is launched.
+- **Simple:** Start and stop ssh tunnels [defined in PuTTY][putty-config-ssh-portfwd] from your system tray.
+- **Persistent Tunnels:** Automatically restart previously active tunnels when ipt.exe starts.
 - **Watchdog:** Restart tunnels that close unexpectedly.
 - **Secure:** No support for password based authentication because it is insecure.
 - **Department Of Redundancy:** *TODO:* Keep track of open tunnels and prevent multiple tunnels from listening on the same port
