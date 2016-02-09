@@ -94,9 +94,10 @@ namespace Infinite.PuTTY.Tunnel.Putty
 
         private void plink_Exited(object sender, EventArgs e)
         {
+            //Watchdog. Restart because we didn't expect plink.exe to exit.
             try
             {
-                //Watchdog. Restart because we didn't expect plink.exe to exit.
+                Start(true);
                 while (!IsActive && IsEnabled)
                 {
                     Thread.Sleep(Settings.Default.WatchDogRetryDelayInMilliseconds);
