@@ -3,7 +3,7 @@
 
 ## Features
 
-- **Quick:** Start and stop ssh tunnels defined in PuTTY from the system tray.
+- **Quick:** Start and stop ssh tunnels [defined in PuTTY](http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-ssh-portfwd) from the system tray.
 - **Persistent Tunnels:** Remember active tunnels and restart them automatically when ipt.exe is launched.
 - **Watchdog:** Restart tunnels that close unexpectedly.
 - **Secure:** No support for password based authentication because it is insecure.
@@ -15,7 +15,7 @@
 ![](screen-shots/SystemTray-CurrentTunnels.png)
 
 ## Best Practices
-1. Configure your tunnel using putty.exe and save it as a session.
+1. Configure your tunnel [using putty.exe](http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-ssh-portfwd) and save it as a session.
 2. [Configure Pageant](http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter9.html#pageant-cmdline-command) to start ipt.exe after your keys are loaded.
 3. Using PuTTY, Ensure that the session works and does not trigger any interactive prompts.
 4. Begin using *Infinite PuTTY Tunnel* to automatically start and maintain your tunnel.
@@ -25,7 +25,7 @@
 1. Install the .NET 4.6.1 Framework. Most computers will already have this installed via Windows Update.
 2. Install the latest version of [PuTTY](http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.66-installer.exe).
 3. Install the [latest version](https://github.com/dietsche/infinite-putty-tunnel/releases/latest/) of *Infinite PuTTY Tunnel*.
-4. Configure a tunnel using PuTTY and save it as a session, and test to make sure the tunnel works properly.
+4. Configure a tunnel [using PuTTY](http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-ssh-portfwd) and save it as a session, and test to make sure the tunnel works properly.
 5. Start Infinite PuTTY Tunnel (ipt.exe).
 6. Use the system tray icon to start your pre-configured ssh tunnel!
 
