@@ -34,7 +34,7 @@ This program is nearly a complete rewrite of the original *Putty Tunnel Manager*
 [current-release]: https://github.com/dietsche/infinite-putty-tunnel/releases/latest/
 [downstream]: https://github.com/joeribekker/putty-tunnel-manager
 [putty]: http://www.chiark.greenend.org.uk/~sgtatham/putty/
-[putty-installer]: http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.66-installer.exe
+[putty-installer]: http://the.earth.li/~sgtatham/putty/0.66/x86/putty-installer.exe
 [putty-config-ssh-portfwd]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-ssh-portfwd
 [putty-config-session]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-session
 [putty-pageant-cmdline-command]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter9.html#pageant-cmdline-command
