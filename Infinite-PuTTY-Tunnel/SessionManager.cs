@@ -55,7 +55,5 @@ namespace Infinite.PuTTY.Tunnel
             }
             Settings.Default.Save();
         }
-
-
     }
 }
