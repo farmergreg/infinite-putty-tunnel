@@ -41,7 +41,7 @@ namespace Infinite.PuTTY.Tunnel
                 //list of sessions available in putty.
                 var enabled = _sessions.Where(s => s.IsEnabled).ToList();
                 var inactive = Putty.Putty.AvaiableSessions.Where(avail => enabled.All(a => a.Name != avail.Name));
-                _sessions = enabled.Union(inactive).ToList();
+                _sessions = enabled.Union(inactive).OrderBy(s=>s.Name).ToList();
                 return _sessions;
             }
         }
