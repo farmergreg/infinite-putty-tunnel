@@ -22,9 +22,9 @@
 
 ## Installation
 
-1. Install the .NET 4.6.1 Framework. Most computers will already have this installed via Windows Update.
-2. Install the [latest version][putty-installer] of PuTTY.
-3. Install the [latest version][current-release] of *Infinite PuTTY Tunnel*.
+1. Download and install the .NET 4.6.1 Framework. Most computers will already have this installed via Windows Update.
+2. Download and install the [latest version][putty-installer] of PuTTY.
+3. Download and install the [latest version][current-release] of *Infinite PuTTY Tunnel*.
 4. [Configure a tunnel][putty-config-ssh-portfwd] using PuTTY and [save it as a session][putty-config-session], and test to make sure the tunnel works properly.
 5. Start Infinite PuTTY Tunnel (ipt.exe).
 6. Use the system tray icon to start your pre-configured ssh tunnel!
