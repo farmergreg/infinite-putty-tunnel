@@ -113,8 +113,6 @@ namespace Infinite.PuTTY.Tunnel.Putty
                 try
                 {
                     Thread.Sleep(Settings.Default.WatchDogRetryDelayInMilliseconds);
-
-                    //If this is the second time through, then only try to start if the thread isn't up yet...
                     if (!IsActive && IsEnabled)
                         Start(true);
                 }
