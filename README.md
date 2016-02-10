@@ -1,5 +1,5 @@
 # Infinite PuTTY Tunnel ([download ipt.exe][current-release])
-*Infinite PuTTY Tunnel* allows you to quickly open persistent ssh tunnels from your system tray using [PuTTY][putty].
+*Infinite PuTTY Tunnel* allows you to quickly open and maintain persistent ssh tunnels from your system tray using [PuTTY][putty].
 
 ## Features
 
