@@ -35,7 +35,7 @@ namespace Infinite.PuTTY.Tunnel.Forms
 {
     public partial class TrayIcon : Form
     {
-        private readonly AboutForm _aboutForm = new AboutForm();
+        private AboutForm _aboutForm;
         private readonly SessionManager _sessionManager = new SessionManager();
 
         public TrayIcon()
@@ -233,8 +233,16 @@ namespace Infinite.PuTTY.Tunnel.Forms
 
         private void MenuAbout_Click(object sender, EventArgs e)
         {
-            if (!_aboutForm.Visible)
+            if (_aboutForm == null)
+            {
+                _aboutForm = new AboutForm();
                 _aboutForm.ShowDialog();
+                _aboutForm = null;
+            }
+            else
+            {
+                _aboutForm.BringToFront();
+            }
         }
     }
 }
