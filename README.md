@@ -40,4 +40,4 @@ This program is nearly a complete rewrite of the original *Putty Tunnel Manager*
 [putty-config-ssh-portfwd]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-ssh-portfwd
 [putty-config-session]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter4.html#config-session
 [putty-pageant-cmdline-command]: http://the.earth.li/~sgtatham/putty/latest/htmldoc/Chapter9.html#pageant-cmdline-command
-[dot-net]: https://www.microsoft.com/en-us/download/details.aspx?id=40773
+[dot-net]: https://msdn.microsoft.com/en-us/library/5a4x27ek(v=vs.110).aspx
