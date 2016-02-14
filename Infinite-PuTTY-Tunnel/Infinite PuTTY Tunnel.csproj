@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Infinite.PuTTY.Tunnel</RootNamespace>
     <AssemblyName>ipt</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>Infinite.PuTTY.Tunnel.Program</StartupObject>
     <ApplicationIcon>Resources\ptm.ico</ApplicationIcon>
