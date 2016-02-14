@@ -7,7 +7,7 @@
 - **Persistent Tunnels:** Automatically restart previously active tunnels when ipt.exe starts.
 - **Watchdog:** Restart tunnels that close unexpectedly.
 - **Secure:** No support for password based authentication because it is insecure.
-- **Department Of Redundancy:** *TODO:* Keep track of open tunnels and prevent multiple tunnels from listening on the same port
+- **Department of Redundancy Department:** *TODO:* Keep track of open tunnels and prevent multiple tunnels from listening on the same port
 
 ## Screen Shots
 
