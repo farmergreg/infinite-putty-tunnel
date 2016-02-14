@@ -1,4 +1,5 @@
 # Infinite PuTTY Tunnel ([download ipt.exe][current-release])
+[![Build Status](https://travis-ci.org/dietsche/infinite-putty-tunnel.svg)](https://travis-ci.org/dietsche/textbelt)
 *Infinite PuTTY Tunnel* allows you to quickly open and maintain persistent ssh tunnels from your system tray using [PuTTY][putty].
 
 ## Features
