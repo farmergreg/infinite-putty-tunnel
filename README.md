@@ -24,8 +24,8 @@
 ## Configuration
 
 1. [Configure your tunnel][putty-config-ssh-portfwd] using putty.exe and [save it as a session][putty-config-session]
-2. [Configure Pageant][putty-pageant-cmdline-command] to start ipt.exe after your keys are loaded
-3. Using PuTTY, Ensure that the session works and does not trigger any interactive prompts
+2. Using PuTTY, Ensure that the session works and does not trigger any interactive prompts
+3. [Configure Pageant][putty-pageant-cmdline-command] to start ipt.exe after your keys are loaded
 4. Begin using *Infinite PuTTY Tunnel* to automatically start and maintain your tunnel
 
 ## History
